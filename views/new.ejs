@@ -1,0 +1,94 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <br /><br />
+      <h1>Create new Listing</h1>
+      <form
+        method="POST"
+        action="/listings"
+        novalidate
+        class="needs-validation"
+         enctype="multipart/form-data" 
+         >
+         <!-- enctpe:: used to store file link/ image link -->
+      
+        <!--bootstrap class for validation -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            name="title"
+            placeholder="Add a title"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">add title</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input
+            type="text"
+            name="description"
+            placeholder="Enter description"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">write something</div>
+        </div>
+
+        
+        <div class="mb-3">
+          <label for="image" class="form-label">Image upload</label>
+          <input
+            type="file"
+            name="image"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <!-- Another row start -->
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="Price" class="form-label">Price</label>
+            <input
+              name="price"
+              placeholder="1200"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">give valid price</div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input
+              type="text"
+              name="country"
+              placeholder="India"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">add country</div>
+          </div>
+        </div>
+        <!-- Another row end -->
+        <div class="mb-3">
+          <label for="Location" class="form-label">Location</label>
+          <input
+            type="text"
+            name="location"
+            placeholder="mumbai,maharashtra"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Add Location</div>
+        </div>
+        <button class="add-btn">Add</button>
+        <br /><br />
+      </form>
+    </div>
+  </div>
+</body>
